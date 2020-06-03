@@ -1,0 +1,330 @@
+:root{
+    --lightGrey: #919191;
+    --hightPink: #ffffff;
+    --bgUno: #50fd5a;
+    --bgDos: #08e2ff;
+    --bgTres: #ff20d8;
+    --grey: #1b1c1d;
+    --circleGrey: #2f2f2f;
+    --loadingTittle: #e0e0e0;
+    --bottomLine: #aeaeae;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0; 
+    padding:0;
+}
+
+body {
+    background-color: var(--backgroundColor); 
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    color: white;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+h3 {
+    color: var(--hightPink);
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    font-size: 3em;
+}
+
+span {
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size:1.9em;
+}
+
+.main {
+    place-content: space-around;
+    padding: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    align-content:center;
+    height: 50vh;
+}
+
+.wrapper {
+    max-width: 850px;
+    width:100%;
+    place-content: space-around;
+    padding: 0px 50px 50px 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;   
+}
+
+.tittle {
+    margin-bottom:50px;
+    display:flex;
+    align-items: center;
+}
+
+/* Top Content Styles _____________ */
+
+.percent {
+    width:200px;
+    min-width:200px;
+    position:relative;
+    margin: 20px;
+}
+
+.first { 
+    background-color:var(--lightGrey);
+}
+
+.resultadoUno, .resultadoDos, .resultadoTres {
+    background-color:var(--bgUno);
+    margin: 15px 0px;
+    padding: 0px 30px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 20px 20px 0.2px rgba(0, 0, 0, 0.06);
+    align-content: center;   
+}
+
+.resultadoDos {
+    background-color:var(--bgDos);
+}
+
+.resultadoTres {
+    background-color:var(--bgTres);
+}
+
+.bottomLine {
+    background:linear-gradient(141deg, rgba(255,10,122,1) 0%, rgba(202,255,0,1) 100%);
+    border-bottom: 6px solid var(--bottomLine);
+    width:200px;
+    position:absolute;
+    bottom:0;
+    left:0;    
+}
+
+.animateLine {
+    animation-name:animateLine;
+    animation-duration: 3000ms;
+    animation-fill-mode:forwards;
+    height:6px;
+    background-color:white;
+    border-bottom: 6px solid white;
+    position:absolute;
+}
+
+@keyframes animateLine {
+    0%{
+        width:0px;
+    }
+    100%{
+        width:60px;
+    }
+}
+.animateLine2 {
+    animation-name:animateLine2;
+    animation-duration: 3000ms;
+    animation-fill-mode:forwards;
+    height:6px;
+    background-color:white;
+    border-bottom: 6px solid white;
+    position:absolute;
+}
+
+@keyframes animateLine2 {
+    0%{
+        width:0px;
+    }
+    100%{
+        width:180px;
+    }
+}
+
+.animateLine3 {
+    animation-name:animateLine3;
+    animation-duration: 3000ms;
+    animation-fill-mode:forwards;
+    height:6px;
+    background-color:white;
+    border-bottom: 6px solid white;
+    position:absolute;
+}
+
+@keyframes animateLine3 {
+
+    0%{
+        width:0px;
+    }
+    100%{
+        width:120px;
+    }
+}
+
+/* Bottom Content Styles _____________ */
+
+.second {
+    background-color:var(--grey);
+}
+
+.second .tittle h2 {
+    color: var(--loadingTittle);
+}
+
+.circles {
+    display: flex;
+    flex-flow: column wrap;   
+    position:relative;
+    margin: 0px 50px;
+}
+
+.circle {
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle span {
+    position: absolute;
+    top: 18%;
+}
+
+.circle span svg {
+    fill: var(--loadingTittle);
+    width:50px;
+    height:50px;
+}
+
+.circles h3 {
+    font-size:1.5em;
+    padding-top: 10px;
+    color:var(--loadingTittle);
+}
+
+.numOne, .numTwo, .numThree {
+    text-align:center;
+}
+
+.circle2, .circle3, .circle4, .cls-1 {
+    fill:transparent;
+}
+
+#circleProgress {
+    transform: rotate(-90deg);
+}
+
+.cls-2 {
+	stroke-dasharray: 297.634488001097;
+	stroke-dashoffset: 297.634488001097;
+    animation-name: progress;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes progress {
+	from {
+		stroke-dashoffset: 297.634488001097;
+	}
+	to {
+		stroke-dashoffset: 110.12476056040589;
+	}
+}
+
+.cls-3 {
+	stroke-dasharray: 297.634488001097;
+	stroke-dashoffset: 297.634488001097;
+    animation-name: progressStar;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes progressStar {
+	from {
+		stroke-dashoffset: 297.634488001097;
+	}
+	to {
+		stroke-dashoffset: 65.47958736024133;
+	}
+}
+
+.cls-4 {
+	stroke-dasharray: 297.634488001097;
+	stroke-dashoffset: 297.634488001097;
+    animation-name: progressCat;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes progressCat {
+	from {
+		stroke-dashoffset: 297.634488001097;
+	}
+	to {
+		stroke-dashoffset: 11.90537952004389;
+	}
+}
+
+/* Reload Buttons __________*/
+
+button {
+    background-color: transparent;
+    border-radius: 30px;
+    border: none;
+    color: var(--mainColor);
+    font-size: 12px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    font-weight:600;
+}
+
+.reloadOne, .reloadTwo {
+    width: 30px;
+    margin-left: 30px;
+}
+
+.reloadOne svg {
+    width:20px;
+    fill: #e1e1e1;
+}
+
+.reloadTwo svg {
+    width:20px;
+    fill: var(--loadingTittle);
+}
+
+button:focus {
+    outline:none;
+}
+
+/* Media Queries */
+
+@media (max-width:650px) {
+
+    .main{
+        height:auto; 
+        padding:50px 0px;        
+    }
+    .circles{
+        margin:20px;
+    }
+    .tittle{
+        margin-top:30px;
+    }
+
+}
